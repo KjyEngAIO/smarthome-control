@@ -1,6 +1,6 @@
 <?php
 require "connect.php";
-$sql = "SELECT * FROM `saklar` WHERE 1";
+$sql = "SELECT * FROM `p3k` WHERE 1";
 $result= mysqli_query($conn,$sql) or die('Errorquery:  '.mysqli_error($conn));
 $rows =array();
 while($baris=mysqli_fetch_assoc($result)) 
@@ -47,7 +47,7 @@ while($baris=mysqli_fetch_assoc($result))
             for (var i = 0; i < 8; i++) {
               var id = obj[i].ID_SAKLAR;
               var waktu = obj[i].WAKTU;
-              var state = obj[i].STATUS;
+              var state = obj[i].STATUS_P3KBOX1;
               var oldstate = ($("[saklar="+id+"]")[0].checked==true) ? "1" : "0" ;
               
               if (state != oldstate) {
@@ -110,28 +110,28 @@ while($baris=mysqli_fetch_assoc($result))
     <div class="col-sm-3">
       <div class="panel panel-primary" style="text-align:center" >
         <div class="panel-heading"><?=$rows[0]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[0]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[0]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[0]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[0]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[0]["ID_SAKLAR"]?>"><?=$rows[0]["WAKTU"]?></div>
       </div>
     </div>
     <div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center" >
         <div class="panel-heading"><?=$rows[1]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[1]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[1]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[1]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[1]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[1]["ID_SAKLAR"]?>"><?=$rows[1]["WAKTU"]?></div>
       </div>
     </div>
     <div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center" >
         <div class="panel-heading"><?=$rows[2]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[2]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[2]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[2]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[2]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[2]["ID_SAKLAR"]?>"><?=$rows[2]["WAKTU"]?></div>
       </div>
     </div>
 	<div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center" >
         <div class="panel-heading"><?=$rows[3]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[3]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[3]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[3]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[3]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[3]["ID_SAKLAR"]?>"><?=$rows[3]["WAKTU"]?></div>
       </div>
     </div>
@@ -143,28 +143,28 @@ while($baris=mysqli_fetch_assoc($result))
     <div class="col-sm-3">
       <div class="panel panel-primary" style="text-align:center">
         <div class="panel-heading"><?=$rows[4]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[4]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[4]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[4]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[4]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[4]["ID_SAKLAR"]?>"><?=$rows[4]["WAKTU"]?></div>
       </div>
     </div>
     <div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center">
         <div class="panel-heading"><?=$rows[5]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[5]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[5]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[5]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[5]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[5]["ID_SAKLAR"]?>"><?=$rows[5]["WAKTU"]?></div>
       </div>
     </div>
     <div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center">
         <div class="panel-heading"><?=$rows[6]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[6]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[6]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[6]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[6]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" waktu="<?=$rows[6]["ID_SAKLAR"]?>"><?=$rows[6]["WAKTU"]?></div>
       </div>
     </div>
 	<div class="col-sm-3"> 
       <div class="panel panel-primary" style="text-align:center">
         <div class="panel-heading"><?=$rows[7]["ID_SAKLAR"]?></div>
-        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[7]["STATUS"]==1)? 'checked' :''?> saklar="<?=$rows[7]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
+        <div class="panel-body" align="center"><input type="checkbox"<?=($rows[7]["STATUS_P3KBOX1"]==1)? 'checked' :''?> saklar="<?=$rows[7]["ID_SAKLAR"]?>" data-toggle="toggle" data-width="100" data-height="75"></div>
         <div class="panel-footer" style="text-align:center" waktu="<?=$rows[7]["ID_SAKLAR"]?>"><?=$rows[7]["WAKTU"]?></div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   require "connect.php";
   date_default_timezone_set('Asia/Jakarta');
   $id_alat=$_GET['ID_ALAT'];
-  $status_led=$_GET['STATUS'];
+  $status_led=$_GET['STATUS_P3KBOX1'];
   $waktu = date('Y-m-d H:i:s');
   
   
@@ -10,12 +10,12 @@
   // $result = mysqli_query($conn,$query) or die('Errorquery:  '.mysqli_error($conn)); 
    
   if ($status_led == '0'){	  
-  $query="INSERT INTO `saklar` VALUES (  'SWITCH_1', '$waktu',0 ) ";
+  $query="INSERT INTO `p3k` VALUES (  '$id_alat', '$waktu',0 ) ";
   $result = mysqli_query($conn,$query) or die('Errorquery:  '.mysqli_error($conn)); 
   }
   
   if ($status_led == '1'){	  
-  $query="INSERT INTO `saklar` VALUES (  'SWITCH_1', '$waktu',1 )";
+  $query="INSERT INTO `p3k` VALUES (  '$id_alat', '$waktu',1 )";
   $result = mysqli_query($conn,$query) or die('Errorquery:  '.mysqli_error($conn));  
   }
      

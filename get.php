@@ -1,6 +1,6 @@
 <?php
 require "connect.php";
-$sql = "SELECT * FROM `saklar` WHERE 1";
+$sql = "SELECT * FROM `p3k` WHERE 1";
 $result= mysqli_query($conn,$sql) or die('Errorquery:  '.mysqli_error($conn));
 $rows =array();
 while($baris=mysqli_fetch_assoc($result)) 

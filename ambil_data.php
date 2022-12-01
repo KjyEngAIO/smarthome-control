@@ -2,7 +2,7 @@
 require "connect.php";
 $id_alat=$_GET['ID_ALAT'];
 
-$sql = "SELECT saklar.ID_SAKLAR,saklar.WAKTU,saklar.STATUS FROM saklar WHERE `ID_SAKLAR`='$id_alat'";
+$sql = "SELECT p3k.ID_SAKLAR,p3k.WAKTU,p3k.STATUS_P3KBOX1 FROM p3k WHERE `ID_p3k`='$id_alat'";
 $result= mysqli_query($conn,$sql) or die('Errorquery:'.mysqli_error($conn));
 while($baris=mysqli_fetch_assoc($result)) 
   {
